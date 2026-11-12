@@ -1,1 +1,346 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Zuriel International Ministries - Kingdom Builders. Building lives on the foundation of Jesus Christ.">
+  <title>Zuriel International Ministries | Kingdom Builders</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #243044;
+      line-height: 1.7;
+      background: #ffffff;
+    }
+
+    header {
+      background: #102b50;
+      color: white;
+      padding: 20px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .logo {
+      font-size: 21px;
+      font-weight: bold;
+    }
+
+    .logo span {
+      display: block;
+      color: #e9bd66;
+      font-size: 12px;
+      letter-spacing: 3px;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #e9bd66;
+    }
+
+    .hero {
+      background: linear-gradient(120deg, #102b50, #244c78);
+      color: white;
+      text-align: center;
+      padding: 105px 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(34px, 6vw, 58px);
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 19px;
+      color: #e9bd66;
+      margin-bottom: 20px;
+    }
+
+    .hero .verse {
+      max-width: 750px;
+      margin: 20px auto;
+      font-style: italic;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #d9aa53;
+      color: #102b50;
+      padding: 12px 28px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 4px;
+      margin-top: 15px;
+    }
+
+    section {
+      padding: 65px 8%;
+    }
+
+    .section-title {
+      text-align: center;
+      color: #102b50;
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+
+    .intro {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 22px;
+      margin-top: 35px;
+    }
+
+    .card {
+      background: #f3f6fa;
+      padding: 28px;
+      border-radius: 8px;
+      border-bottom: 3px solid #d9aa53;
+    }
+
+    .card h3 {
+      color: #102b50;
+      margin-bottom: 10px;
+    }
+
+    .devotion {
+      background: #102b50;
+      color: white;
+      text-align: center;
+    }
+
+    .devotion h2 {
+      color: #e9bd66;
+    }
+
+    .devotion .intro {
+      margin-top: 20px;
+    }
+
+    .videos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    iframe {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: 0;
+      border-radius: 8px;
+    }
+
+    .contact {
+      background: #f3f6fa;
+      text-align: center;
+    }
+
+    footer {
+      background: #0b1e36;
+      color: white;
+      text-align: center;
+      padding: 25px;
+    }
+
+    footer span {
+      color: #e9bd66;
+    }
+
+    @media (max-width: 650px) {
+      header {
+        justify-content: center;
+      }
+
+      nav {
+        justify-content: center;
+      }
+
+      .hero {
+        padding: 75px 18px;
+      }
+
+      section {
+        padding: 50px 6%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">
+    ZURIEL INTERNATIONAL MINISTRIES
+    <span>KINGDOM BUILDERS</span>
+  </div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#ministries">Ministries</a>
+    <a href="#devotion">Devotion</a>
+    <a href="#sermons">Sermons</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <h1>Zuriel International Ministries</h1>
+  <p>Kingdom Builders</p>
+
+  <div class="verse">
+    "For no other foundation can anyone lay than that which
+    is laid, which is Jesus Christ."
+    <br><strong>1 Corinthians 3:11 (NKJV)</strong>
+  </div>
+
+  <a href="#about" class="btn">Discover Our Ministry</a>
+</section>
+
+<section id="about">
+  <div class="intro">
+    <h2 class="section-title">Welcome to Zuriel</h2>
+    <p>
+      Zuriel International Ministries is committed to serving
+      God, building believers and uplifting the next generation
+      through the knowledge of our Lord Jesus Christ.
+    </p>
+    <p>
+      Our desire is to raise Kingdom builders who will influence
+      their generation through faith, worship, prayer and the
+      Word of God.
+    </p>
+  </div>
+</section>
+
+<section id="ministries">
+  <h2 class="section-title">Our Ministries</h2>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Worship & Praise</h3>
+      <p>Creating an atmosphere of worship and thanksgiving
+      through music and praise.</p>
+    </div>
+
+    <div class="card">
+      <h3>Youth Ministry</h3>
+      <p>Equipping and empowering young people to discover
+      their purpose in God's Kingdom.</p>
+    </div>
+
+    <div class="card">
+      <h3>Ministers' Training</h3>
+      <p>Preparing and equipping ministers through prayer,
+      biblical teaching and spiritual growth.</p>
+    </div>
+
+    <div class="card">
+      <h3>Church Choir</h3>
+      <p>Serving God through praise, worship and musical
+      ministry.</p>
+    </div>
+
+    <div class="card">
+      <h3>Bible Study</h3>
+      <p>Growing together through the study and understanding
+      of God's Word.</p>
+    </div>
+
+    <div class="card">
+      <h3>Music & Skills Training</h3>
+      <p>Developing talents, creativity and practical skills
+      for meaningful service.</p>
+    </div>
+  </div>
+</section>
+
+<section class="devotion" id="devotion">
+  <h2 class="section-title">Daily Bible Devotion</h2>
+
+  <div class="intro">
+    <h3>God Has Anointed You as a King</h3>
+
+    <p>
+      Revelation 1:6 reminds us that Christ has made us kings
+      and priests unto God. Every believer has a God-given
+      territory and an assignment to fulfil.
+    </p>
+
+    <p>
+      Discover your field, develop your gifts and occupy
+      your territory until the Lord comes.
+    </p>
+
+    <p><strong>Further Study: Acts 17:26; Luke 19:13</strong></p>
+  </div>
+</section>
+
+<section id="sermons">
+  <h2 class="section-title">Sermons & Worship</h2>
+
+  <div class="intro">
+    <p>Watch, learn and grow through our ministry teachings
+    and worship sessions.</p>
+  </div>
+
+  <div class="videos">
+    <iframe
+      src="https://www.youtube.com/embed/407kEbxpYdw"
+      title="Zuriel Ministry Video"
+      allowfullscreen>
+    </iframe>
+
+    <iframe
+      src="https://www.youtube.com/embed/PI41mBPTO6M"
+      title="Zuriel Worship Video"
+      allowfullscreen>
+    </iframe>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <h2 class="section-title">Connect With Us</h2>
+  <p>Zuriel International Ministries</p>
+  <p>Mengo, along Sentema Road, behind Ndejje University</p>
+  <p>Sunday Services: 10:00 AM – 1:30 PM (EAT)</p>
+  <p>Phone: 0751531809 / 0776531809</p>
+  <p>Email and social media links will be added soon.</p>
+</section>
+
+<footer>
+  <p>© 2026 Zuriel International Ministries.</p>
+  <p><span>Kingdom Builders</span> | Built on Christ, our foundation.</p>
+</footer>
+
+</body>
+</html>
