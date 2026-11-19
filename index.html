@@ -2,345 +2,675 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Zuriel International Ministries - Kingdom Builders. Building lives on the foundation of Jesus Christ.">
-  <title>Zuriel International Ministries | Kingdom Builders</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Zuriel International Ministries - Building lives on the foundation of Jesus Christ. Join us in Mengo, Uganda.">
+<meta name="theme-color" content="#681b35">
+<link rel="icon" type="image/png" href="zuriel-logo.png">
+<title>Zuriel International Ministries</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
 
-    body {
-      font-family: Arial, sans-serif;
-      color: #243044;
-      line-height: 1.7;
-      background: #ffffff;
-    }
+body {
+  font-family: Arial, sans-serif;
+  background: #f7f8fc;
+  color: #202633;
+  line-height: 1.7;
+}
 
-    header {
-      background: #102b50;
-      color: white;
-      padding: 20px 7%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 15px;
-    }
+header {
+  background: #421225;
+  color: white;
+  padding: 18px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
 
-    .logo {
-      font-size: 21px;
-      font-weight: bold;
-    }
+.logo {
+  font-size: 21px;
+  font-weight: bold;
+}
 
-    .logo span {
-      display: block;
-      color: #e9bd66;
-      font-size: 12px;
-      letter-spacing: 3px;
-    }
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
 
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-size: 14px;
-    }
+nav a:hover {
+  color: #e6bd72;
+}
 
-    nav a:hover {
-      color: #e9bd66;
-    }
+.hero {
+  background: linear-gradient(135deg, #421225, #173d70);
+  color: white;
+  padding: 110px 8%;
+  text-align: center;
+}
 
-    .hero {
-      background: linear-gradient(120deg, #102b50, #244c78);
-      color: white;
-      text-align: center;
-      padding: 105px 20px;
-    }
+.hero h1 {
+  font-size: clamp(38px, 6vw, 65px);
+  margin-bottom: 15px;
+}
 
-    .hero h1 {
-      font-size: clamp(34px, 6vw, 58px);
-      margin-bottom: 15px;
-    }
+.hero h2 {
+  color: #e6bd72;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
 
-    .hero p {
-      font-size: 19px;
-      color: #e9bd66;
-      margin-bottom: 20px;
-    }
+.hero p {
+  max-width: 750px;
+  margin: auto;
+  color: #e5eaf3;
+}
 
-    .hero .verse {
-      max-width: 750px;
-      margin: 20px auto;
-      font-style: italic;
-    }
+.button {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 13px 27px;
+  background: #e6bd72;
+  color: #421225;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
 
-    .btn {
-      display: inline-block;
-      background: #d9aa53;
-      color: #102b50;
-      padding: 12px 28px;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 4px;
-      margin-top: 15px;
-    }
+section {
+  padding: 75px 8%;
+}
 
-    section {
-      padding: 65px 8%;
-    }
+.section-title {
+  text-align: center;
+  font-size: 32px;
+  color: #173d70;
+  margin-bottom: 12px;
+}
 
-    .section-title {
-      text-align: center;
-      color: #102b50;
-      font-size: 30px;
-      margin-bottom: 15px;
-    }
+.section-intro {
+  text-align: center;
+  color: #687386;
+  max-width: 750px;
+  margin: 0 auto 40px;
+}
 
-    .intro {
-      max-width: 850px;
-      margin: auto;
-      text-align: center;
-    }
+.highlight {
+  background: #edf1f8;
+}
 
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 22px;
-      margin-top: 35px;
-    }
+.about {
+  max-width: 850px;
+  margin: auto;
+  text-align: center;
+}
 
-    .card {
-      background: #f3f6fa;
-      padding: 28px;
-      border-radius: 8px;
-      border-bottom: 3px solid #d9aa53;
-    }
+.about p {
+  margin-bottom: 17px;
+  color: #526078;
+}
 
-    .card h3 {
-      color: #102b50;
-      margin-bottom: 10px;
-    }
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 22px;
+}
 
-    .devotion {
-      background: #102b50;
-      color: white;
-      text-align: center;
-    }
+.card {
+  background: white;
+  padding: 27px;
+  border-radius: 9px;
+  border: 1px solid #e6eaf1;
+  box-shadow: 0 5px 20px rgba(16,29,53,.05);
+  transition: transform .2s;
+}
 
-    .devotion h2 {
-      color: #e9bd66;
-    }
+.card:hover {
+  transform: translateY(-5px);
+}
 
-    .devotion .intro {
-      margin-top: 20px;
-    }
+.card h3 {
+  color: #681b35;
+  margin-bottom: 10px;
+}
 
-    .videos {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
-      margin-top: 30px;
-    }
+.card p {
+  color: #657087;
+  font-size: 15px;
+}
 
-    iframe {
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      border: 0;
-      border-radius: 8px;
-    }
+.symbol {
+  font-size: 30px;
+  margin-bottom: 12px;
+}
 
-    .contact {
-      background: #f3f6fa;
-      text-align: center;
-    }
+.pastor {
+  max-width: 850px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 35px;
+  align-items: center;
+}
 
-    footer {
-      background: #0b1e36;
-      color: white;
-      text-align: center;
-      padding: 25px;
-    }
+.pastor img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+}
 
-    footer span {
-      color: #e9bd66;
-    }
+.schedule {
+  width: 100%;
+  max-width: 850px;
+  margin: auto;
+  border-collapse: collapse;
+  background: white;
+}
 
-    @media (max-width: 650px) {
-      header {
-        justify-content: center;
-      }
+.schedule th,
+.schedule td {
+  padding: 14px;
+  border: 1px solid #e3e6ed;
+  text-align: left;
+}
 
-      nav {
-        justify-content: center;
-      }
+.schedule th {
+  background: #173d70;
+  color: white;
+}
 
-      .hero {
-        padding: 75px 18px;
-      }
+.verse {
+  background: #173d70;
+  color: white;
+  padding: 25px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+}
 
-      section {
-        padding: 50px 6%;
-      }
-    }
-  </style>
+.verse strong {
+  color: #e6bd72;
+}
+
+.giving {
+  background: #421225;
+  color: white;
+  text-align: center;
+}
+
+.giving .section-title {
+  color: white;
+}
+
+.giving-numbers {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.giving-numbers div {
+  background: rgba(255,255,255,.1);
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.giving-numbers strong {
+  display: block;
+  font-size: 23px;
+  color: #e6bd72;
+}
+
+.contact {
+  background: #173d70;
+  color: white;
+  text-align: center;
+}
+
+.contact .section-title {
+  color: white;
+}
+
+.contact p {
+  max-width: 700px;
+  margin: auto;
+}
+
+.socials {
+  margin-top: 20px;
+}
+
+.socials a {
+  color: #e6bd72;
+  margin: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer {
+  background: #101d35;
+  color: #d7e0ef;
+  padding: 25px;
+  text-align: center;
+}
+
+@media(max-width:650px) {
+  header {
+    justify-content: center;
+    text-align: center;
+  }
+
+  nav {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  section {
+    padding: 55px 6%;
+  }
+
+  .pastor {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .pastor img {
+    max-width: 280px;
+    margin: auto;
+  }
+
+  .schedule th,
+  .schedule td {
+    padding: 9px 6px;
+    font-size: 13px;
+  }
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <div class="logo">
-    ZURIEL INTERNATIONAL MINISTRIES
-    <span>KINGDOM BUILDERS</span>
-  </div>
+  <div class="logo">ZURIEL INTERNATIONAL MINISTRIES</div>
 
   <nav>
     <a href="#home">Home</a>
     <a href="#about">About</a>
+    <a href="#pastor">Leadership</a>
     <a href="#ministries">Ministries</a>
-    <a href="#devotion">Devotion</a>
+    <a href="#services">Services</a>
     <a href="#sermons">Sermons</a>
+    <a href="#giving">Giving</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
 
-<section class="hero" id="home">
-  <h1>Zuriel International Ministries</h1>
-  <p>Kingdom Builders</p>
+<main>
 
-  <div class="verse">
-    "For no other foundation can anyone lay than that which
-    is laid, which is Jesus Christ."
+<section class="hero" id="home">
+  <h1>Welcome to Zuriel International Ministries</h1>
+  <h2>Jesus Christ Is Our Sure Foundation</h2>
+
+  <p>
+    A Christ-centred ministry committed to prayer,
+    worship, the Word of God, discipleship and
+    transforming lives through Jesus Christ.
+  </p>
+
+  <div class="verse" style="margin-top:30px;">
+    "For no other foundation can anyone lay than
+    that which is laid, which is Jesus Christ."
     <br><strong>1 Corinthians 3:11 (NKJV)</strong>
   </div>
 
-  <a href="#about" class="btn">Discover Our Ministry</a>
+  <a href="#services" class="button">Join Us in Worship</a>
 </section>
 
 <section id="about">
-  <div class="intro">
-    <h2 class="section-title">Welcome to Zuriel</h2>
+  <h2 class="section-title">About Our Ministry</h2>
+
+  <p class="section-intro">
+    Discover our foundation, vision and commitment
+    to the work of God's Kingdom.
+  </p>
+
+  <div class="about">
     <p>
-      Zuriel International Ministries is committed to serving
-      God, building believers and uplifting the next generation
-      through the knowledge of our Lord Jesus Christ.
+      Zuriel International Ministries is a Christian
+      ministry established on the foundation of
+      Jesus Christ. We are committed to building
+      believers through the Word of God, prayer,
+      worship and fellowship.
     </p>
+
     <p>
-      Our desire is to raise Kingdom builders who will influence
-      their generation through faith, worship, prayer and the
-      Word of God.
+      Our desire is to see lives transformed,
+      families strengthened and believers equipped
+      to serve God faithfully.
+    </p>
+
+    <p>
+      We believe that Jesus Christ is the foundation
+      of our faith, our ministry and everything we do.
     </p>
   </div>
 </section>
 
-<section id="ministries">
+<section class="highlight">
+  <h2 class="section-title">Our Foundation</h2>
+
+  <div class="verse">
+    <p>
+      "For no other foundation can anyone lay
+      than that which is laid, which is Jesus Christ."
+    </p>
+    <br>
+    <strong>1 Corinthians 3:11 (NKJV)</strong>
+  </div>
+</section>
+
+<section id="pastor">
+  <h2 class="section-title">Our Senior Pastor</h2>
+
+  <p class="section-intro">
+    Spiritual leadership and service to God's people.
+  </p>
+
+  <div class="pastor">
+    <img src="pastor-loy.jpg"
+         alt="Pastor Loy Ssenfuka">
+
+    <div>
+      <h2>Pastor Loy Ssenfuka</h2>
+      <h3>Senior Pastor</h3>
+
+      <p>
+        Welcome to Zuriel International Ministries.
+        We invite you to grow in faith, discover God's
+        Word and experience fellowship with believers.
+      </p>
+
+      <p>
+        Our commitment is to build lives on Jesus Christ,
+        our sure foundation.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="highlight" id="ministries">
   <h2 class="section-title">Our Ministries</h2>
+
+  <p class="section-intro">
+    Growing together and serving the Kingdom of God.
+  </p>
+
+  <div class="cards">
+
+    <div class="card">
+      <div class="symbol">🎶</div>
+      <h3>Worship Ministry</h3>
+      <p>Worship, praise and thanksgiving to God.</p>
+    </div>
+
+    <div class="card">
+      <div class="symbol">🎤</div>
+      <h3>Choir Ministry</h3>
+      <p>Developing singers and instrumentalists.</p>
+    </div>
+
+    <div class="card">
+      <div class="symbol">🌱</div>
+      <h3>Youth Ministry</h3>
+      <p>Equipping young people to grow in Christ.</p>
+    </div>
+
+    <div class="card">
+      <div class="symbol">📖</div>
+      <h3>Bible Study</h3>
+      <p>Learning and understanding the Word of God.</p>
+    </div>
+
+    <div class="card">
+      <div class="symbol">🙏</div>
+      <h3>Prayer Ministry</h3>
+      <p>Prayer, fasting and intercession.</p>
+    </div>
+
+    <div class="card">
+      <div class="symbol">🕊️</div>
+      <h3>Evangelism</h3>
+      <p>Sharing the Gospel and reaching communities.</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="services">
+  <h2 class="section-title">Weekly Services</h2>
+
+  <p class="section-intro">
+    Join us in worship and fellowship.
+    All times are East Africa Time (EAT).
+  </p>
+
+  <table class="schedule">
+    <tr><th>Day</th><th>Programme</th><th>Time</th></tr>
+    <tr><td>Sunday</td><td>Main Service</td><td>10 AM – 1:30 PM</td></tr>
+    <tr><td>Monday</td><td>Evening Service</td><td>6 PM – 8 PM</td></tr>
+    <tr><td>Tuesday</td><td>Evening Service</td><td>6 PM – 8 PM</td></tr>
+    <tr><td>Wednesday</td><td>Fasting & Intercession</td><td>10 AM – 6 PM</td></tr>
+    <tr><td>Thursday</td><td>Evening Service</td><td>6 PM – 8 PM</td></tr>
+    <tr><td>Friday</td><td>Evening Service</td><td>6 PM – 8 PM</td></tr>
+    <tr><td>Saturday</td><td>Choir & Instrumental Training</td><td>To be confirmed</td></tr>
+  </table>
+
+  <p style="text-align:center;margin-top:20px;">
+    <strong>Monthly Overnight Prayer:</strong>
+    Every last Friday of the month.
+  </p>
+</section>
+
+<section class="highlight" id="events">
+  <h2 class="section-title">Events & Conferences</h2>
 
   <div class="cards">
     <div class="card">
-      <h3>Worship & Praise</h3>
-      <p>Creating an atmosphere of worship and thanksgiving
-      through music and praise.</p>
+      <h3>Church Conferences</h3>
+      <p>Special gatherings for teaching and spiritual growth.</p>
     </div>
 
     <div class="card">
-      <h3>Youth Ministry</h3>
-      <p>Equipping and empowering young people to discover
-      their purpose in God's Kingdom.</p>
+      <h3>Thanksgiving</h3>
+      <p>Celebrating God's goodness and faithfulness.</p>
     </div>
 
     <div class="card">
-      <h3>Ministers' Training</h3>
-      <p>Preparing and equipping ministers through prayer,
-      biblical teaching and spiritual growth.</p>
-    </div>
-
-    <div class="card">
-      <h3>Church Choir</h3>
-      <p>Serving God through praise, worship and musical
-      ministry.</p>
-    </div>
-
-    <div class="card">
-      <h3>Bible Study</h3>
-      <p>Growing together through the study and understanding
-      of God's Word.</p>
-    </div>
-
-    <div class="card">
-      <h3>Music & Skills Training</h3>
-      <p>Developing talents, creativity and practical skills
-      for meaningful service.</p>
+      <h3>Overnight Prayer</h3>
+      <p>Seeking God's presence together in prayer.</p>
     </div>
   </div>
 </section>
 
-<section class="devotion" id="devotion">
-  <h2 class="section-title">Daily Bible Devotion</h2>
+<section id="daily-word">
+  <h2 class="section-title">Daily Bible Verse</h2>
 
-  <div class="intro">
-    <h3>God Has Anointed You as a King</h3>
-
-    <p>
-      Revelation 1:6 reminds us that Christ has made us kings
-      and priests unto God. Every believer has a God-given
-      territory and an assignment to fulfil.
+  <div class="verse">
+    <p id="dailyVerse">
+      "The LORD is my shepherd; I shall not want."
     </p>
+    <br>
+    <strong id="verseReference">Psalm 23:1 (NKJV)</strong>
+  </div>
 
-    <p>
-      Discover your field, develop your gifts and occupy
-      your territory until the Lord comes.
-    </p>
+  <p style="text-align:center;margin-top:25px;">
+    <a href="https://www.biblegateway.com/"
+       target="_blank" class="button">
+       Read the Bible Online
+    </a>
+  </p>
+</section>
 
-    <p><strong>Further Study: Acts 17:26; Luke 19:13</strong></p>
+<section class="highlight" id="sermons">
+  <h2 class="section-title">Sermons & Teachings</h2>
+
+  <p class="section-intro">
+    Watch messages, teachings and ministry videos.
+  </p>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Watch Our Ministry</h3>
+      <p>Visit our YouTube channel for sermons and messages.</p>
+      <a href="https://www.youtube.com/"
+         target="_blank">Visit YouTube</a>
+    </div>
+
+    <div class="card">
+      <h3>Follow Our Updates</h3>
+      <p>Connect with us through our Facebook page.</p>
+      <a href="https://www.facebook.com/profile.php?id=100068761111633"
+         target="_blank">Visit Facebook</a>
+    </div>
   </div>
 </section>
 
-<section id="sermons">
-  <h2 class="section-title">Sermons & Worship</h2>
+<section class="highlight" id="gallery">
+  <h2 class="section-title">Church Gallery</h2>
 
-  <div class="intro">
-    <p>Watch, learn and grow through our ministry teachings
-    and worship sessions.</p>
-  </div>
+  <p class="section-intro">
+    Moments of worship, fellowship and ministry.
+  </p>
 
-  <div class="videos">
-    <iframe
-      src="https://www.youtube.com/embed/407kEbxpYdw"
-      title="Zuriel Ministry Video"
-      allowfullscreen>
-    </iframe>
+  <div class="cards">
+    <div class="card">
+      <h3>Worship Services</h3>
+      <p>Church worship and praise photographs.</p>
+    </div>
 
-    <iframe
-      src="https://www.youtube.com/embed/PI41mBPTO6M"
-      title="Zuriel Worship Video"
-      allowfullscreen>
-    </iframe>
+    <div class="card">
+      <h3>Conferences</h3>
+      <p>Special gatherings and ministry events.</p>
+    </div>
+
+    <div class="card">
+      <h3>Community Outreach</h3>
+      <p>Sharing God's love with our communities.</p>
+    </div>
   </div>
 </section>
 
-<section class="contact" id="contact">
-  <h2 class="section-title">Connect With Us</h2>
-  <p>Zuriel International Ministries</p>
-  <p>Mengo, along Sentema Road, behind Ndejje University</p>
-  <p>Sunday Services: 10:00 AM – 1:30 PM (EAT)</p>
-  <p>Phone: 0751531809 / 0776531809</p>
-  <p>Email and social media links will be added soon.</p>
+<section class="giving" id="giving">
+  <h2 class="section-title">Giving & Partnership</h2>
+
+  <p style="margin:15px auto 30px;max-width:700px;">
+    Thank you for partnering with the ministry.
+    You can use the church mobile-money contacts below.
+    Please confirm the recipient before sending.
+  </p>
+
+  <div class="giving-numbers">
+    <div>
+      <p>Mobile Money Contact</p>
+      <strong>0751531809</strong>
+    </div>
+
+    <div>
+      <p>Mobile Money Contact</p>
+      <strong>0776531809</strong>
+    </div>
+  </div>
+
+  <p style="margin-top:20px;font-size:13px;">
+    Never share your mobile-money PIN or password.
+  </p>
 </section>
+
+<section id="contact">
+  <h2 class="section-title">Contact Us</h2>
+
+  <p>
+    We welcome you to worship with us at
+    Zuriel International Ministries.
+  </p>
+
+  <p style="margin-top:20px;">
+    <strong>Location:</strong><br>
+    Mengo, along Sentema Road, behind Ndejje University,
+    near Kaki Petrol Station, Uganda.
+  </p>
+
+  <p style="margin-top:15px;">
+    <strong>Senior Pastor:</strong>
+    Pastor Loy Ssenfuka
+  </p>
+
+  <p style="margin-top:15px;">
+    <strong>Telephone:</strong><br>
+    0751531809<br>
+    0776531809
+  </p>
+
+  <div class="socials">
+    <a href="https://www.facebook.com/profile.php?id=100068761111633"
+       target="_blank">Facebook</a>
+
+    <a href="https://www.youtube.com/"
+       target="_blank">YouTube</a>
+  </div>
+</section>
+
+</main>
 
 <footer>
-  <p>© 2026 Zuriel International Ministries.</p>
-  <p><span>Kingdom Builders</span> | Built on Christ, our foundation.</p>
+  <p>
+    © <span id="year"></span>
+    Zuriel International Ministries.
+    All Rights Reserved.
+  </p>
+
+  <p>Built on Jesus Christ, our sure foundation.</p>
 </footer>
+
+<script>
+const verses = [
+  ["The LORD is my shepherd; I shall not want.", "Psalm 23:1"],
+  ["I can do all things through Christ who strengthens me.", "Philippians 4:13"],
+  ["Be still, and know that I am God.", "Psalm 46:10"],
+  ["The joy of the LORD is your strength.", "Nehemiah 8:10"],
+  ["Trust in the LORD with all your heart.", "Proverbs 3:5"],
+  ["For with God nothing will be impossible.", "Luke 1:37"],
+  ["Let all that you do be done with love.", "1 Corinthians 16:14"]
+];
+
+const today = Math.floor(Date.now() / 86400000);
+const verse = verses[today % verses.length];
+
+document.getElementById("dailyVerse").textContent =
+  '"' + verse[0] + '"';
+
+document.getElementById("verseReference").textContent =
+  verse[1] + " (NKJV)";
+
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+</script>
 
 </body>
 </html>
