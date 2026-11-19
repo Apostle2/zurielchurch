@@ -4,9 +4,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Zuriel International Ministries - Building lives on the foundation of Jesus Christ. Join us Today in Mengo, Uganda.">
+<meta name="description" content="Zuriel International Ministries - Building lives on the foundation of Jesus Christ. Join us in Mengo, Uganda.">
 <meta name="theme-color" content="#681b35">
+
 <link rel="icon" type="image/png" href="zuriel-logo.png">
+<link rel="shortcut icon" href="zuriel-logo.png">
+
 <title>Zuriel International Ministries</title>
 
 <style>
@@ -91,6 +94,10 @@ nav a:hover {
   border-radius: 5px;
 }
 
+.button:hover {
+  background: white;
+}
+
 section {
   padding: 75px 8%;
 }
@@ -153,6 +160,18 @@ section {
   font-size: 15px;
 }
 
+.card a {
+  display: inline-block;
+  margin-top: 15px;
+  color: #173d70;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
 .symbol {
   font-size: 30px;
   margin-bottom: 12px;
@@ -208,6 +227,66 @@ section {
   color: #e6bd72;
 }
 
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.gallery-item {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(16,29,53,.08);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  display: block;
+  cursor: pointer;
+  transition: transform .3s;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.04);
+}
+
+.gallery-item p {
+  padding: 12px;
+  text-align: center;
+  font-weight: bold;
+  color: #681b35;
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  background: rgba(0,0,0,.92);
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+}
+
+.lightbox img {
+  max-width: 95%;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.lightbox .close {
+  position: absolute;
+  top: 15px;
+  right: 30px;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+}
+
 .giving {
   background: #421225;
   color: white;
@@ -249,7 +328,12 @@ section {
 
 .contact p {
   max-width: 700px;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact a {
+  color: #e6bd72;
 }
 
 .socials {
@@ -316,6 +400,7 @@ footer {
     <a href="#ministries">Ministries</a>
     <a href="#services">Services</a>
     <a href="#sermons">Sermons</a>
+    <a href="#gallery">Gallery</a>
     <a href="#giving">Giving</a>
     <a href="#contact">Contact</a>
   </nav>
@@ -393,8 +478,7 @@ footer {
   </p>
 
   <div class="pastor">
-    <img src="pastor-loy.jpg"
-         alt="Pastor Loy Ssenfuka">
+    <img src="pastor-loy.jpg" alt="Pastor Loy Ssenfuka">
 
     <div>
       <h2>Pastor Loy Ssenfuka</h2>
@@ -512,16 +596,16 @@ footer {
   <h2 class="section-title">Daily Bible Verse</h2>
 
   <div class="verse">
-    <p id="dailyVerse">
-      "The LORD is my shepherd; I shall not want."
-    </p>
+    <p id="dailyVerse">The LORD is my shepherd; I shall not want.</p>
     <br>
     <strong id="verseReference">Psalm 23:1 (NKJV)</strong>
   </div>
 
   <p style="text-align:center;margin-top:25px;">
     <a href="https://www.biblegateway.com/"
-       target="_blank" class="button">
+       target="_blank"
+       rel="noopener noreferrer"
+       class="button">
        Read the Bible Online
     </a>
   </p>
@@ -537,19 +621,24 @@ footer {
   <div class="cards">
     <div class="card">
       <h3>Watch Our Ministry</h3>
-      <p>Visit our YouTube channel for sermons and messages.</p>
+      <p>Visit our official YouTube channel for sermons and messages.</p>
+
       <a href="https://www.youtube.com/@zurielinternationalMinistries"
-   target="_blank"
-   rel="noopener noreferrer">
-   Visit Zuriel YouTube Channel
-</a>
+         target="_blank"
+         rel="noopener noreferrer">
+         Visit Zuriel YouTube Channel
+      </a>
     </div>
 
     <div class="card">
       <h3>Follow Our Updates</h3>
-      <p>Connect with us through our Facebook page.</p>
+      <p>Connect with us through our official Facebook page.</p>
+
       <a href="https://www.facebook.com/profile.php?id=100068761111633"
-         target="_blank">Visit Facebook</a>
+         target="_blank"
+         rel="noopener noreferrer">
+         Visit Facebook Page
+      </a>
     </div>
   </div>
 </section>
@@ -559,25 +648,68 @@ footer {
 
   <p class="section-intro">
     Moments of worship, fellowship and ministry.
+    Click any photograph to view it in a larger size.
   </p>
 
-  <div class="cards">
-    <div class="card">
-      <h3>Worship Services</h3>
-      <p>Church worship and praise photographs.</p>
+  <div class="gallery">
+
+    <div class="gallery-item">
+      <img src="church-1.jpg" alt="Church exterior" loading="lazy" onclick="openLightbox(this)">
+      <p>Church Exterior</p>
     </div>
 
-    <div class="card">
-      <h3>Conferences</h3>
-      <p>Special gatherings and ministry events.</p>
+    <div class="gallery-item">
+      <img src="church-2.jpg" alt="Church auditorium" loading="lazy" onclick="openLightbox(this)">
+      <p>Church Auditorium</p>
     </div>
 
-    <div class="card">
-      <h3>Community Outreach</h3>
-      <p>Sharing God's love with our communities.</p>
+    <div class="gallery-item">
+      <img src="worship-1.jpg" alt="Worship service" loading="lazy" onclick="openLightbox(this)">
+      <p>Worship Service</p>
     </div>
+
+    <div class="gallery-item">
+      <img src="worship-2.jpg" alt="Praise and worship" loading="lazy" onclick="openLightbox(this)">
+      <p>Praise and Worship</p>
+    </div>
+
+    <div class="gallery-item">
+      <img src="choir-1.jpg" alt="Church choir" loading="lazy" onclick="openLightbox(this)">
+      <p>Choir Ministry</p>
+    </div>
+
+    <div class="gallery-item">
+      <img src="conference-1.jpg" alt="Church conference" loading="lazy" onclick="openLightbox(this)">
+      <p>Church Conference</p>
+    </div>
+
+    <div class="gallery-item">
+      <img src="conference-2.jpg" alt="Guest ministers" loading="lazy" onclick="openLightbox(this)">
+      <p>Guest Ministers</p>
+    </div>
+
+    <div class="gallery-item">
+      <img src="prayer-1.jpg" alt="Overnight prayer" loading="lazy" onclick="openLightbox(this)">
+      <p>Overnight Prayer</p>
+    </div>
+
+    <div class="gallery-item">
+      <img src="outreach-1.jpg" alt="Community evangelism" loading="lazy" onclick="openLightbox(this)">
+      <p>Community Outreach</p>
+    </div>
+
+    <div class="gallery-item">
+      <img src="church-3.jpg" alt="Church fellowship" loading="lazy" onclick="openLightbox(this)">
+      <p>Church Fellowship</p>
+    </div>
+
   </div>
 </section>
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <span class="close">&times;</span>
+  <img id="lightboxImage" src="" alt="Enlarged church photograph">
+</div>
 
 <section class="giving" id="giving">
   <h2 class="section-title">Giving & Partnership</h2>
@@ -605,7 +737,7 @@ footer {
   </p>
 </section>
 
-<section id="contact">
+<section class="contact" id="contact">
   <h2 class="section-title">Contact Us</h2>
 
   <p>
@@ -626,18 +758,16 @@ footer {
 
   <p style="margin-top:15px;">
     <strong>Telephone:</strong><br>
-    0751531809<br>
-    0776531809
+    <a href="tel:+256751531809">0751531809</a><br>
+    <a href="tel:+256776531809">0776531809</a>
   </p>
 
   <div class="socials">
     <a href="https://www.facebook.com/profile.php?id=100068761111633"
-       target="_blank">Facebook</a>
+       target="_blank" rel="noopener noreferrer">Facebook</a>
 
-   <a href="https://www.youtube.com/@zurielinternationalMinistries"
-   target="_blank"
-   rel="noopener noreferrer">YouTube</a>
-    
+    <a href="https://www.youtube.com/@zurielinternationalMinistries"
+       target="_blank" rel="noopener noreferrer">YouTube</a>
   </div>
 </section>
 
@@ -675,6 +805,21 @@ document.getElementById("verseReference").textContent =
 
 document.getElementById("year").textContent =
   new Date().getFullYear();
+
+function openLightbox(image) {
+  document.getElementById("lightboxImage").src = image.src;
+  document.getElementById("lightbox").style.display = "flex";
+}
+
+function closeLightbox() {
+  document.getElementById("lightbox").style.display = "none";
+}
+
+document.addEventListener("keydown", function(event) {
+  if (event.key === "Escape") {
+    closeLightbox();
+  }
+});
 </script>
 
 </body>
